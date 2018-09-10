@@ -1,3 +1,8 @@
+/**
+ * This sample shows how to connect a Box webhook to a Openwhisk app.
+ */
+
+'use strict'
 import BoxSDK from 'box-node-sdk';
 
 function handleWebhookEvent(body, sdk) {
