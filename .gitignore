@@ -2,3 +2,4 @@ node_modules
 dist
 action.zip
 local.env
+deploy.sh
