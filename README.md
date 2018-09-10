@@ -35,5 +35,3 @@ Also, you'll need an IBM Cloud account and the latest [OpenWhisk command line to
 
 ##### Step 2. Deployment
 
-[![Deploy to the IBM Cloud](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy)
-
