@@ -23,15 +23,13 @@ function usage() {
 
 function install() {
 
-echo "Creating a package (here used as a namespace for shared environment variables)"
+echo "Creating a package"
   bx wsk package create box-webhook-handler \
-    --param "BOX_CONFIG" $BOX_CONFIG 
+    --param "BOX_CONFIG" YOUR_BOX_JSON_CONFIG 
   # Exit if any command fails
   set -e
 
-  echo -e "Installing OpenWhisk actions, triggers, and rules for openwhisk-serverless-apis..."
-
-  echo -e "Setting Bluemix credentials and logging in to provision API Gateway"
+  echo -e "Installing OpenWhisk actions, triggers, and rules for box-webhook-handler..."
   
   npx babel src --out-dir dist
   zip -rq action.zip *
