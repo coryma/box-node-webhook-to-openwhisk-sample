@@ -46,7 +46,7 @@ $ npm install
 
 ##### Step 3. Create OpenWhisk actions and mappings
 
-1. 
+1. Deploy the package and the action
 ```bash
 ./deploy.sh --install
 ```
