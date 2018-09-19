@@ -46,7 +46,7 @@ $ npm install
 2. Rename local.env.template to local.env
 3. Edit local.env
     * In `BOX_USER_ID`, input your Box account ID 
-    * In `BOX_CONIF`, paste the contents of your JSON config file into the `''` (keep the single quote). 
+    * In `BOX_CONFIG`, paste the contents of your JSON config file into the `''` (keep the single quote). 
 
 ##### Step 3. Create OpenWhisk actions and mappings
 
