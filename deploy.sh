@@ -11,7 +11,7 @@ function install() {
 
   npx babel src --out-dir dist
   zip -rq action.zip *
-  BOX_CONFIG=$BOX_CONFIG API_KEY=$API_KEY wskdeploy -p .
+  WATSON_USER_NAME=$WATSON_USER_NAME WATSON_PASSWORD=$WATSON_PASSWORD BOX_CONFIG=$BOX_CONFIG BOX_USER_ID=$BOX_USER_ID wskdeploy -p .
   
   echo -e "Install Complete"
 }
@@ -19,11 +19,7 @@ function install() {
 function uninstall() {
   echo -e "Uninstalling..."
 
-  echo "Removing API actions..."
-  bx wsk action delete box-webhook-handler/hello-box
-
-  echo "Removing package..."
-  bx wsk package delete box-webhook-handler
+   wskdeploy undeploy
 
   echo -e "Uninstall Complete"
 }

@@ -3,10 +3,13 @@ packages:
     version: 1.0
     license: Apache-2.0
     actions:
-      hello-box:
+      speech-to-text:
         location: action.zip
         runtime: nodejs:8
+        web: raw
         inputs:
           boxConfig: ${BOX_CONFIG}
           boxUserId: ${BOX_USER_ID}
+          watsonUserName: ${WATSON_USER_NAME}
+          watsonPassword: ${WATSON_PASSWORD}
   
