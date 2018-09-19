@@ -1,0 +1,12 @@
+packages:
+  box-webhook-handler:
+    version: 1.0
+    license: Apache-2.0
+    actions:
+      hello-box:
+        location: action.zip
+        runtime: nodejs:8
+        inputs:
+          boxConfig: ${BOX_CONFIG}
+          boxUserId: ${BOX_USER_ID}
+  
