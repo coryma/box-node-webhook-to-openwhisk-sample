@@ -14,8 +14,7 @@ These instructions will get you a copy of the project up and running the IBM Clo
 
 You should have a basic understanding of the OpenWhisk programming model. If not, [try the action, trigger, and rule demo first](https://github.com/IBM/openwhisk-action-trigger-rule).
 
-Also, you'll need an IBM Cloud account and the latest [OpenWhisk command line tool (`bx wsk`) installed and on your PATH](https://github.com/IBM/openwhisk-action-trigger-rule/blob/master/docs/OPENWHISK.md).
-
+Also, you'll need an IBM Cloud account and the latest [Whisk Deploy Utility (`wskdeploy`) installed and on your PATH](https://github.com/apache/incubator-openwhisk-wskdeploy#downloading-released-binaries).
 
 
 ### Using the sample
@@ -38,11 +37,16 @@ Also, you'll need an IBM Cloud account and the latest [OpenWhisk command line to
 
 ##### Step 2. Clone the repository 
 
+1. Clone the respository and initial the project
 ```
 $ git clone https://github.com/coryma/box-node-webhook-to-openwhisk-sample.git # or fork and clone your own
 $ cd box-node-webhook-to-openwhisk-sample
 $ npm install
 ```
+2. Rename local.env.template to local.env
+3. Edit local.env
+    * In `BOX_USER_ID`, input your Box account ID 
+    * In `BOX_CONIF`, paste the contents of your JSON config file into the `''` (keep the single quote). 
 
 ##### Step 3. Create OpenWhisk actions and mappings
 
@@ -52,9 +56,7 @@ $ npm install
 ```
 2. Log into the [IBM Cloud console](https://console.bluemix.net/openwhisk/actions)
     * Find your package and action in the right panel, and click the action name (ex. hello-box). 
-3. Click "Parameters" section in the left-side navbar
-    * Paste the contents of your JSON config file into the `BOX_CONFIG` Parameter Value.
-4. Click "Endpoints" section in the left-side navbar 
+3. Click "Endpoints" section in the left-side navbar 
     * Copy the "URL" in "Web Actions"
 
 #### Step 4. Create a Box webhook to call the Lambda function
