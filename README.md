@@ -59,7 +59,7 @@ $ npm install
 3. Click "Endpoints" section in the left-side navbar 
     * Copy the "URL" in "Web Actions"
 
-#### Step 4. Create a Box webhook to call the Lambda function
+#### Step 4. Create a Box webhook to connect to your OpenWhisk action
 Note: See [Getting Started with Webhooks V2](https://docs.box.com/v2.0/docs/getting-started-with-webhooks-v2) and [Overview of Webhooks V2](https://docs.box.com/reference#webhooks-v2) for more info.
 
 1. Choose a folder in your Box account and record the "Folder ID"
